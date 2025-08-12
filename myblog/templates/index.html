@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+
+        body {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+
+        }
+
+
+        /* This part is for the header only */
+        header {
+            padding-top: 10px;
+            background-color: darkblue;
+            color: white;
+        }
+        header #headerone img {
+            width: 40%;
+            border-radius: 20px;
+            clip-path: circle();
+        }
+        header #headerone {
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .black {
+            background-color: black;
+            color: white;
+            padding: 0.5px 0.5px 0.5px 20px;
+        }
+        #headertwotwo p {
+            padding: 0.5px 0.5px 0.5px 20px;
+        }
+        #headertwotwo p i {
+            padding-right: 10px;
+        }
+
+        /* This part is for the main only */
+        main {
+            padding-left: 20px;
+        }
+        #mainthree {
+            background-color: #ccc;
+            padding: 10px 10px 10px 10px;
+        }
+        #mainone {
+            background-color: #ccc;
+            padding: 10px;
+        }
+        #mainonetwo {
+            background-color: white;
+            margin: 10px 10px 10px 10px;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        #maintwo {
+            background-color: #ccc;
+            padding: 10px;
+            margin: 10px 0 10px 0;
+        }
+        .all {
+            background-color: white;
+            margin: 10px 10px 10px 10px;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        #maintwotwoone {
+            display: flex;
+            justify-content: space-between;
+        }
+        #mainthreetwoone {
+            display: flex;
+            justify-content: space-between;
+        }
+        #mainfour {
+            background-color: #ccc;
+            padding: 10px 10px 10px 10px;
+        }
+        #mainfive p i {
+            padding-right: 10px;
+        }
+
+
+        
+
+        /* Media query for HP CORE I5 */
+        /* CSS styles specific to HP CORE I5  */
+        @media only screen and (max-width: 1600px) and (min-width: 900px){
+        } 
+
+        /* Media query for Samsung Galaxy S9+ */
+        /* CSS styles specific to Samsung Galaxy S9+ */
+        @media only screen and (max-width: 658px) and (min-width: 320px) {
+        }
+
+        /* Media query for Samsung Galaxy S8 */
+        /* CSS styles specific to Samsung Galaxy S8 */
+        @media only screen and (max-width: 740px) and (min-width: 360px) {
+        }
+
+        /* Media query for Samsung Galaxy tab */
+        /* CSS styles specific to Samsung Galaxy tab */
+        @media only screen and (max-width: 1138px) and (min-width: 712px) {
+        }
+
+        /* Media query for Samsung Galaxy s20 ultra */
+        /* CSS styles specific to Samsung Galaxy s20 ultra */
+        @media only screen and (max-width: 915px) and (min-width: 412px) {
+        }
+
+        /* Media query for iPhone 6/7/8 */
+        /* CSS styles specific to iPhone 6/7/8 */
+        /* Media query for ALL laptops */
+        @media only screen and (max-width: 667px) and (min-width: 414px) {
+            body {
+                display: flex;
+                flex-direction: column;
+            }
+            main {
+                margin-top: 10px;
+                margin-left: -20px;
+            }
+        }
+
+        /* CSS styles specific All laptops */
+        @media only screen and (max-width: 1920px) and (min-width: 1366px){
+        }
+
+        /* Media query for samsung galaxy ao3s and a10 */
+        /* CSS styles specific to samsung galaxy ao3s and a10 */
+        @media only screen and (max-width: 720px) and (min-width: 320px) {
+            body {
+                display: flex;
+                flex-direction: column;
+            }
+
+            /* This part is for the header part */
+            header {
+                font-size: 10px;
+            }
+            header #headerone img {
+            width: 40%;
+            border-radius: 60px;
+            clip-path: circle();
+            }
+            #headerthreetwo {
+                padding-left: 20px;
+            }
+            #headerfourtwo {
+                padding-left: 20px;
+            }
+            #headerfivetwo{
+                padding-left: 20px;
+            }
+            #headersixtwo {
+                padding-left: 20px;
+            }
+
+            /* This part is for the main part */
+            main {
+                margin-top: 10px;
+                margin-left: -20px;
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+
+        <div id="headerone">
+            <h2>Gbarabe Tordi Joseph</h2>
+            <img src="../static/img/picture2.jpg" alt="">
+        </div>
+
+        <div id="headertwo">
+            <div id="headertwoone" class="black">
+                <h3>Contact</h3>
+            </div>
+            <div id="headertwotwo">
+                <p><i class="fa fa-envelope" aria-hidden="true"></i>Tordigbarabe33@gmail.com</p>
+                <p><i class="fa fa-phone" aria-hidden="true"></i>+234-706-884-8255</p>
+                <p><i class="fa fa-map-marker" aria-hidden="true"></i>Nigeria, Rivers state</p>
+            </div>
+        </div>
+
+        <div id="headerthree">
+            <div id="headerthreeone" class="black">
+                <h3>Skills</h3>
+            </div>
+            <div id="headerthreetwo">
+                <p>Software Developer</p>
+                <p>Creating Dynamic CV</p>
+            </div>
+        </div>
+
+        <div id="headerfour">
+            <div id="headerfourone" class="black">
+                <h3>Achievement And Awards</h3>
+            </div>
+            <div id="headerfourtwo">
+                <p>Best Employee Of The 3rd Quater Of 2024</p>
+            </div>
+        </div>
+
+        <div id="headerfive">
+            <div id="headerfiveone" class="black">
+                <h3>Languages</h3>
+            </div>
+            <div id="headerfivetwo">
+                <p>English</p>
+                <p>Cameron</p>
+                <p>Ogoni</p>
+            </div>
+        </div>
+
+        <div id="headersix">
+            <div id="headersixone" class="black">
+                <h3>Interests</h3>
+            </div>
+            <div id="headersixtwo">
+                <p>Football</p>
+                <p>coding</p>
+                <p>dancing</p>
+            </div>
+        </div>
+
+        <div id="headerseven">
+            <div id="headersevenone" class="black">
+                <h3>Activities</h3>
+            </div>
+            <div id="headerseventwo">
+                <p>IT Club, ABC University</p>
+            </div>
+        </div>
+
+    </header>
+
+
+
+    <main>
+
+        <div id="mainone">
+            <div id="mainoneone">
+                <h3>OBJECTIVE</h3>
+            </div>
+            <div id="mainonetwo">
+                <p>
+                    Highly motivated developer with a passion for crafting user-centric software. I leverage 3 years of experience and technical expertise in HTML, CSS, BOOTSTRAP, JAVASCRIPT, PYTHON and DJANGO frameworks to bridge user needs with innovative solutions.
+                </p>
+                <p>
+                    A reliable team player, I consistently deliver high-quality code on time. Strong communication skills allow me to collaborate effectively and share knowledge. My dedication extends beyond technical abilities, with a focus on continuous learning and incorporating fresh ideas.
+                </p>
+            </div>
+        </div><hr>
+
+        <div id="maintwo">
+            <div id="maintwoone">
+                <h3>EXPERIENCE</h3>
+            </div>
+
+            <div id="maintwotwo" class="all">
+                <div id="maintwotwoone">
+                    <div id="maintwotwooneone">
+                        <h4>EVASON INTERNATIONAL PRIMARY AND SECONDAY SCHOOL</h4>
+                    </div>
+                    <div id="maintwotwoonetwo">
+                        <P>01/01/2019 - 14/12/2023</P>
+                    </div>
+                </div>
+                <div id="maintwothree">
+                    <h3>TEACHER</h3>
+                </div>
+                <div id="mainfour">
+                    <p>
+                        Teacher in the junior secondary who taught MATHEMATICS from JSS1 till JSS3
+                    </p>
+                </div>
+            </div>
+
+            <div id="maintwotwo"  class="all">
+                <div id="maintwotwoone">
+                    <div id="maintwotwooneone">
+                        <h4>University Of Port Harcourt</h4>
+                    </div>
+                    <div id="maintwotwoonetwo">
+                        <P>01/01/2019 - 01/01/2020</P>
+                    </div>
+                </div>
+                <div id="maintwothree">
+                    <h3>COMPUTER SCIENTIST</h3>
+                </div>
+                <div id="mainfour">
+                    <p>
+                        Woked as a computer scientist in the University Of Port Harcourt
+                    </p>
+                </div>
+            </div>
+
+        </div><hr>
+
+        <div id="mainthree">
+            <div id="mainthreeone">
+                <h3>EDUCATION</h3>
+            </div>
+            <div id="mainthreetwo" class="all">
+                <div id="mainthreetwoone">
+                    <div id="mainthreetwoone">
+                        <h3>SCHOOL NAME</h3>
+                    </div>
+                    <div id="mainthreetwotwo">
+                        <p>
+                            2015-2024
+                        </p>
+                    </div>
+                </div>
+                <p>University Of Port Harcourt</p>
+                <div id="mainthreethree">
+                    <div id="mainthreethreeone">
+                        <h3>COURSE</h3>
+                    </div>
+                    <div id="mainthreethreetwo">
+                        <p>
+                            Petroleum Engineering
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div><hr>
+
+
+        <div id="mainfour">
+            <div id="mainfourone">
+                <h3>PROJECT</h3>
+            </div>
+
+            <div id="mainfournav" class="all">
+                <div id="mainfourtwo">
+                    <div id="mainfourtwoone">
+                        <h3>CHATAPP</h3>
+                    </div>
+                    <div id="mainfourtwotwo">
+                        <p>
+                            Chatapp is a platform that was designed for people all round the world to chat with their friends and love once.
+                        </p>
+                        <p>
+                            <a href="https://tordichatapp.pythonanywhere.com/">CLICK HERE TO VIEW THE CHAT APP</a>
+                        </p>
+                    </div>
+                </div>
+    
+                <div id="mainfourtwo">
+                    <div id="mainfourtwoone">
+                        <h3>TORDI CALCULATOR APP</h3>
+                    </div>
+                    <div id="mainfourtwotwo">
+                        <p>
+                            Tordi caclculator app is a caclculatorwebsite that helps young schoolars make simples calculations from anywhere with the help of thier cell phones.
+                        </p>
+                        <a href="https://tordicalculator.pythonanywhere.com/">CLICK HERE TO VIEW THE CALCULATOR APP</a>
+                    </div>
+                </div>
+    
+                <div id="mainfourtwo">
+                    <div id="mainfourtwoone">
+                        <h3>PROJECT NAME</h3>
+                    </div>
+                    <div id="mainfourtwotwo">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque placeat dolore porro ea 
+                            dignissimos itaque officiis praesentium aspernatur? Alias vel voluptates natus nostrum 
+                            aperiam corrupti omnis deserunt mollitia dolore aspernatur.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div><hr>
+
+        <style>
+            #mainfive {
+                background-color: #ccc;
+                padding: 10px 10px 10px 10px;
+            }
+        </style>
+
+        <div id="mainfive">
+            <div id="mainfiveone">
+                REFFERENCE
+            </div>
+            <div id="mainfiveall" class="all">
+                <div id="mainfivetwo">
+                    <h4>Mr. JOHN</h4>
+                </div>
+                <div id="mainfivethree">
+                    <p><i class="fa fa-envelope" aria-hidden="true"></i>john@gmail.com</p>
+                </div>
+                <div id="mainfivefour">
+                    <p><i class="fa fa-phone" aria-hidden="true"></i>+234 - 706-884 - 8255</p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <p>&copy; 2024, Printed by TORDI</p>
+    </footer>
+
+</body>
+</html>
