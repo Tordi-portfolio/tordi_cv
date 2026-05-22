@@ -1,228 +1,507 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Joseph Gbarabe - Resume</title>
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
   <style>
-    :root {
-      --primary-color: #0a192f;
-      --secondary-color: #112240;
-      --accent-color: #64ffda;
-      --text-color: #e0e0e0;
-      --light-gray: #ccd6f6;
-      --white: #ffffff;
-      --border-radius: 10px;
+
+    :root{
+      --primary-color:#07111f;
+      --secondary-color:#111c2d;
+      --card-color:#162337;
+      --accent-color:#64ffda;
+      --text-color:#e6edf7;
+      --muted-text:#a8b2d1;
+      --white:#ffffff;
+      --border-color:rgba(255,255,255,0.08);
+      --shadow:0 10px 25px rgba(0,0,0,0.35);
+      --radius:18px;
+      --transition:0.3s ease;
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
     }
 
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--primary-color);
-      color: var(--text-color);
-      line-height: 1.6;
+    body{
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background:linear-gradient(to bottom,#07111f,#0f172a);
+      color:var(--text-color);
+      line-height:1.7;
     }
 
-    header, main {
-      padding: 20px;
+    a{
+      text-decoration:none;
+      color:var(--accent-color);
+      transition:var(--transition);
     }
 
-    .container {
-      display: flex;
-      gap: 20px;
-      max-width: 1200px;
-      margin: auto;
-      flex-wrap: wrap;
+    a:hover{
+      color:#ffffff;
     }
 
-    header {
-      flex: 1 1 300px;
-      background-color: var(--secondary-color);
-      border-radius: var(--border-radius);
-      text-align: center;
-      padding-top: 30px;
+    .container{
+      max-width:1250px;
+      margin:auto;
+      padding:30px 20px;
+      display:grid;
+      grid-template-columns:320px 1fr;
+      gap:25px;
     }
 
-    header img {
-      width: 150px;
-      height: 150px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 3px solid var(--accent-color);
-      margin-bottom: 20px;
+    /* SIDEBAR */
+
+    header{
+      background:rgba(17,28,45,0.95);
+      border:1px solid var(--border-color);
+      border-radius:var(--radius);
+      padding:35px 25px;
+      text-align:center;
+      position:sticky;
+      top:20px;
+      height:fit-content;
+      box-shadow:var(--shadow);
     }
 
-    header h1 {
-      font-size: 24px;
-      color: var(--accent-color);
+    header img{
+      width:170px;
+      height:170px;
+      border-radius:50%;
+      object-fit:cover;
+      border:4px solid var(--accent-color);
+      margin:auto;
+      margin-bottom:20px;
+      box-shadow:0 0 30px rgba(100,255,218,0.25);
     }
 
-    header h3 {
-      color: var(--light-gray);
-      margin-bottom: 10px;
+    header h1{
+      font-size:28px;
+      margin-bottom:8px;
+      color:var(--white);
     }
 
-    header ul {
-      list-style: none;
-      margin-top: 20px;
+    header h3{
+      color:var(--accent-color);
+      font-weight:500;
+      margin-bottom:25px;
     }
 
-    header ul li {
-      margin-bottom: 10px;
-      font-size: 14px;
+    header ul{
+      list-style:none;
+      text-align:left;
+      margin-top:20px;
     }
 
-    main {
-      flex: 2 1 600px;
+    header ul li{
+      margin-bottom:16px;
+      font-size:15px;
+      color:var(--muted-text);
+      display:flex;
+      align-items:center;
+      gap:12px;
+      word-break:break-word;
     }
 
-    section {
-      background-color: var(--secondary-color);
-      padding: 20px;
-      border-radius: var(--border-radius);
-      margin-bottom: 20px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    header ul li i{
+      color:var(--accent-color);
+      width:18px;
     }
 
-    section h2 {
-      color: var(--accent-color);
-      border-bottom: 2px solid var(--accent-color);
-      margin-bottom: 15px;
-      padding-bottom: 5px;
-      font-size: 20px;
+    /* MAIN CONTENT */
+
+    main{
+      display:flex;
+      flex-direction:column;
+      gap:25px;
     }
 
-    .card {
-      margin-bottom: 15px;
+    section{
+      background:rgba(17,28,45,0.95);
+      border:1px solid var(--border-color);
+      border-radius:var(--radius);
+      padding:30px;
+      box-shadow:var(--shadow);
+      transition:var(--transition);
     }
 
-    .card strong {
-      display: block;
-      margin-bottom: 5px;
+    section:hover{
+      transform:translateY(-3px);
     }
 
-    a {
-      color: var(--accent-color);
-      text-decoration: none;
+    section h2{
+      color:var(--accent-color);
+      font-size:24px;
+      margin-bottom:20px;
+      position:relative;
+      padding-bottom:10px;
     }
 
-    a:hover {
-      text-decoration: underline;
+    section h2::after{
+      content:'';
+      position:absolute;
+      left:0;
+      bottom:0;
+      width:70px;
+      height:3px;
+      background:var(--accent-color);
+      border-radius:10px;
     }
 
-    footer {
-      text-align: center;
-      background-color: var(--secondary-color);
-      padding: 15px;
-      font-size: 14px;
-      color: var(--light-gray);
+    section p{
+      color:var(--muted-text);
+      font-size:16px;
     }
 
-    @media (max-width: 768px) {
-      .container {
-        flex-direction: column;
+    .card{
+      background:var(--card-color);
+      border:1px solid rgba(255,255,255,0.05);
+      border-radius:14px;
+      padding:18px;
+      margin-bottom:18px;
+      transition:var(--transition);
+    }
+
+    .card:hover{
+      border-color:var(--accent-color);
+      transform:translateY(-2px);
+    }
+
+    .card strong{
+      display:block;
+      color:var(--white);
+      margin-bottom:8px;
+      font-size:16px;
+    }
+
+    ul{
+      padding-left:20px;
+    }
+
+    ul li{
+      margin-bottom:12px;
+      color:var(--muted-text);
+    }
+
+    /* PROJECTS */
+
+    .project-list li{
+      background:var(--card-color);
+      padding:16px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,0.05);
+      margin-bottom:15px;
+      list-style:none;
+      transition:var(--transition);
+    }
+
+    .project-list li:hover{
+      border-color:var(--accent-color);
+      transform:translateY(-2px);
+    }
+
+    .project-list a{
+      margin-left:5px;
+      font-weight:600;
+    }
+
+    /* SKILLS */
+
+    .skills-list{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:15px;
+      padding-left:0;
+      margin-top:10px;
+    }
+
+    .skills-list li{
+      list-style:none;
+      background:var(--card-color);
+      border:1px solid rgba(255,255,255,0.05);
+      padding:15px;
+      border-radius:12px;
+      text-align:center;
+      transition:var(--transition);
+    }
+
+    .skills-list li:hover{
+      border-color:var(--accent-color);
+      transform:translateY(-3px);
+    }
+
+    /* FOOTER */
+
+    footer{
+      margin-top:20px;
+      background:#09101d;
+      border-top:1px solid var(--border-color);
+      text-align:center;
+      padding:20px;
+      color:var(--muted-text);
+      font-size:14px;
+    }
+
+    /* MOBILE */
+
+    @media(max-width:900px){
+
+      .container{
+        grid-template-columns:1fr;
       }
 
-      header, main {
-        width: 100%;
+      header{
+        position:relative;
+        top:0;
       }
 
-      header img {
-        width: 120px;
-        height: 120px;
-      }
     }
+
+    @media(max-width:600px){
+
+      .container{
+        padding:20px 12px;
+      }
+
+      header{
+        padding:30px 20px;
+      }
+
+      header img{
+        width:130px;
+        height:130px;
+      }
+
+      header h1{
+        font-size:24px;
+      }
+
+      section{
+        padding:22px 18px;
+      }
+
+      section h2{
+        font-size:22px;
+      }
+
+      section p,
+      li{
+        font-size:15px;
+      }
+
+    }
+
   </style>
 </head>
+
 <body>
+
   <div class="container">
+
+    <!-- SIDEBAR -->
+
     <header>
-      <img src="../static/img/picture2.jpg" alt="Joseph Gbarabe" />
+
+      <img src="../static/img/profile_picture.jfif" alt="Joseph Gbarabe"/>
+
       <h1>Gbarabe Tordi Joseph</h1>
+
       <h3>Web Developer</h3>
+
       <ul>
-        <li><i class="fas fa-envelope"></i> techwithtordi@gmail.com</li>
-        <li><i class="fas fa-phone"></i> 07068848255</li>
-        <li><i class="fas fa-map-marker-alt"></i> Port Harcourt, Nigeria</li>
+
+        <li>
+          <i class="fas fa-envelope"></i>
+          techwithtordi@gmail.com
+        </li>
+
+        <li>
+          <i class="fas fa-phone"></i>
+          07068848255
+        </li>
+
+        <li>
+          <i class="fas fa-map-marker-alt"></i>
+          Port Harcourt, Nigeria
+        </li>
+
       </ul>
+
     </header>
 
+    <!-- MAIN CONTENT -->
+
     <main>
+
       <section>
+
         <h2>Profile</h2>
-        <p>I am a self-motivated and enthusiastic individual with a passion for web development, cybersecurity, and problem-solving. I'm currently building projects with Python, JavaScript, Django, and Boostrap.</p>
+
+        <p>
+          I am a self-motivated and enthusiastic individual with a passion for web development, cybersecurity, and problem-solving. I'm currently building projects with Python, JavaScript, Django, and Boostrap.
+        </p>
+
       </section>
 
       <section>
+
         <h2>Experience</h2>
+
         <div class="card">
-          <strong>Software Developer Intern – Woke Technologies | 2023 - Present</strong>
-          <p>Worked on various frontend and backend projects including a school management system, Bitcoin investment website, and user authentication system using Django.</p>
+
+          <strong>
+            Software Developer Intern – Woke Technologies | 2023 - Present
+          </strong>
+
+          <p>
+            Worked on various frontend and backend projects including a school management system, Bitcoin investment website, and user authentication system using Django.
+          </p>
+
         </div>
+
       </section>
 
       <section>
+
         <h2>Education</h2>
+
         <div class="card">
-          <strong>Olobo Premier College Choba | SSCE | 2018</strong>
-          <p>Graduated with strong foundation in sciences in my seconday school.</p>
+
+          <strong>
+            Olobo Premier College Choba | SSCE | 2018
+          </strong>
+
+          <p>
+            Graduated with strong foundation in sciences in my seconday school.
+          </p>
+
         </div>
+
         <div class="card">
-          <strong>University Of Port Harcourt Choba | BSC | 2012 2018</strong>
-          <p>currently a 400 level petroleum Engineering student in te uniersity of port harcourt.</p>
+
+          <strong>
+            University Of Port Harcourt Choba | BSC | 2012 2018
+          </strong>
+
+          <p>
+            currently a 400 level petroleum Engineering student in te uniersity of port harcourt.
+          </p>
+
         </div>
+
       </section>
 
-
       <section>
+
         <h2>Projects</h2>
-        <ul>
-            <li>Django School Management System – full student and staff portal with result uploads and dashboards.  <a href="https://tordischool.pythonanywhere.com">Demo</a></li>
-            <li>Bitcoin Investment Platform (WasePay) – deposit, withdrawal, referral system, admin panel.  <a href="https://wasepay.pythonanywhere.com">Demo</a></li>
-            <li>Crypto wallet - Store your crypto currency, send receive an view transaction.  <a href="https://bitcoinlab.pythonanywhere.com">Demo</a></li>
-            <li>Jason Momoa fans club and official website page platform - all about Jason Momoa.  <a href="https://jasonmomoa.pythonanywhere.com">Demo</a></li>
-            <li>Keanu Reeves fans club and official website page platform - all about Keanu Reeves.  <a href="https://keanuerevvesofficialsite.pythonanywhere.com">Demo</a></li>
-            <li>Consignment Or Shipping site - Shipping Goos to all round the world and have a tracking ID to track you sipped goods.  <a href="https://keanuerevvesofficialsite.pythonanywhere.com">Demo</a></li>
-            <li>My Port Folio - Find everything about me in my port Folio website.  <a href="https://tordiportfilio.pythonanywhere.com/">Demo</a></li>
-            
+
+        <ul class="project-list">
+
+          <li>
+            Django School Management System – full student and staff portal with result uploads and dashboards.
+            <a href="https://tordischool.pythonanywhere.com">Demo</a>
+          </li>
+
+          <li>
+            Uniport Petroleum Book Store
+            <a href="UniportPetroleumBooks.pythonanywhere.com">Demo</a>
+          </li>
+
+          <li>
+            De claim digger restaurant website
+          </li>
+
+          <li>
+            SeaBreeze restaurant website
+            <a href="">Demo</a>
+          </li>
+
+          <li>
+            Smart Pipeline Monitoring System
+            <a href="https://emmauelfinalyearproject.pythonanywhere.com/">Demo</a>
+          </li>
+
+          <li>
+            Petroleum 3d well simulation
+            <a href="https://emmaprojectwork.pythonanywhere.com/">Demo</a>
+          </li>
+
+          <li>
+            ChatBot for customer service
+            <a href="">Demo</a>
+          </li>
+
+          <li>
+            My Port Folio - Find everything about me in my port Folio website.
+            <a href="https://tordiportfilio.pythonanywhere.com/">Demo</a>
+          </li>
+
         </ul>
+
       </section>
 
-
-
       <section>
+
         <h2>Skills</h2>
-        <ul>
+
+        <ul class="skills-list">
+
           <li>Python, JavaScript, HTML5, CSS3</li>
+
           <li>Django, Bootstrap, Scrapy</li>
+
           <li>Git, GitHub, Firebase, APIs, Domain names</li>
+
           <li>Problem Solving, Cybersecurity basics</li>
+
         </ul>
+
       </section>
 
       <section>
+
         <h2>Certifications</h2>
+
         <ul>
-          <li>Frontend Development – Great Learning and Solo Learn(2023)</li>
-          <li>Python for Beginners – Simple Learning (2023)</li>
+
+          <li>
+            Frontend Development – Great Learning and Solo Learn(2023)
+          </li>
+
+          <li>
+            Python for Beginners – Simple Learning (2023)
+          </li>
+
+          <li>
+            My Port Folio - Find everything about me in my port Folio website.
+            <a href="https://tordiportfilio.pythonanywhere.com/">Click Here</a>
+          </li>
+
         </ul>
+
       </section>
 
       <section>
+
         <h2>Reference</h2>
+
         <p>Available upon request.</p>
+
       </section>
+
     </main>
+
   </div>
 
   <footer>
     &copy; 2025 Joseph Gbarabe. All Rights Reserved.
   </footer>
+
 </body>
 </html>
